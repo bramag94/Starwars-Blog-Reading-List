@@ -14,7 +14,13 @@ export const Planets = () => {
 					{store.planets.map((item, index) => {
 						return (
 							<div key={index} className="col-md-4 mb-3">
-								<Cardplanetas name={item.name} diameter={item.diameter} climate={item.climate} />;
+								<Cardplanetas
+									name={item.name}
+									diameter={item.diameter}
+									climate={item.climate}
+									index={index}
+								/>
+								;
 							</div>
 						);
 					})}

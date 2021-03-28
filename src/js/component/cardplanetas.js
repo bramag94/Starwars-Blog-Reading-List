@@ -21,7 +21,7 @@ export const Cardplanetas = props => {
 
 Cardplanetas.propTypes = {
 	name: PropTypes.string,
-	diameter: PropTypes.number,
+	diameter: PropTypes.string,
 	climate: PropTypes.string,
 	index: PropTypes.number
 };

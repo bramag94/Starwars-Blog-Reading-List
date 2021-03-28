@@ -28,7 +28,7 @@ export const Home = () => (
 						<img
 							width={300}
 							height={200}
-							src="https://lh3.googleusercontent.com/proxy/mmCGzpt0hDAwHhqfrGHnRqBRLH_JuQtSC1ta0FxWu4cactocATMYo_PBLPTOf1BqLuL6_7fP6P1siyCJS6cPgZwm2o63VGAc0FUxvJE7AL2R9-VcdkJ8R39q890fYzc"
+							src="https://lh3.googleusercontent.com/proxy/8znS6vub9Bx9vWfxpmNkNOKTCp-4K2tDphqG-GISvGUt49SwDiJNMsroHJIqnfVnhzfk2pFN7lj6UdbKRPOIv_5DDPRmVTPsSf2z4UL6xpVwlp0zFrUbihasnaQ4X5U"
 							alt="Baby Yoda"
 							border-radius="5"
 						/>
