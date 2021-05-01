@@ -13,7 +13,7 @@ export const Planetdetails = props => {
 	console.log("favorites", store.favs);
 
 	return (
-		<div className="container">
+		<div className="container colorbg">
 			<div className="card" style={{ width: "18rem" }}>
 				<img
 					src="https://static2.abc.es/media/201201/19/Star_Wars--644x450.jpg"

@@ -7,8 +7,10 @@ export const Planets = () => {
 	const { store } = useContext(Context);
 	console.log("data", store.planets);
 	return (
-		<div className=" container text-center mt-5">
-			<h1>Planets</h1>
+		<div className="container text-center mt-5 ">
+			<div className="text-white">
+				<h1>PLANETS</h1>
+			</div>
 			<div className>
 				<div className="card-deck">
 					{store.planets.map((item, index) => {
