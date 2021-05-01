@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			favs: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -28,6 +29,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ planets: data.results });
 			},
 
+			createfavs: data => {
+				const store = getStore();
+				setStore({ favs: data });
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
