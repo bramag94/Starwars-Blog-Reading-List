@@ -13,23 +13,40 @@ export const Planetdetails = props => {
 	console.log("favorites", store.favs);
 
 	return (
-		<div className="container colorbg">
-			<div className="card" style={{ width: "18rem" }}>
-				<img
-					src="https://static2.abc.es/media/201201/19/Star_Wars--644x450.jpg"
-					className="card-img-top"
-					alt="..."
-				/>
-				<div className="card-body">
-					<h5 className="card-title"> Nombre: {selected.name} </h5>
-					<p className="card-text"> Diámero {selected.diameter}</p>
-					<p className="card-text"> Tipo de clima: {selected.climate}</p>{" "}
-					<Link to={"/planets"}>
-						<button className="btn btn-primary">Ir atrás</button>
-					</Link>
-					<button className="btn btn-primary" onClick={() => actions.createfavs(selected)}>
-						Fav
-					</button>
+		<div className="container colorbg homesize contcard">
+			<div className="mt-3">
+				<div className="row">
+					<div className="col">
+						<img
+							src="https://static2.abc.es/media/201201/19/Star_Wars--644x450.jpg"
+							className="card-img-top"
+							alt="..."
+						/>{" "}
+					</div>
+					<div className="col">
+						<div className="row text-white border border-white">
+							<h3 className="align-middle titulo">{selected.name}</h3>{" "}
+						</div>
+						<div className="row text-white cuerpo">
+							<ul>
+								<li>Periodo de rotación: {selected.rotation_period}</li>
+								<li>Tipo de clima: {selected.climate}</li>
+								<li>Terreno: {selected.terrain}</li>
+								<li>Superficie de agua: {selected.surface_water}</li>
+								<li>Población: {selected.population}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div className="row text-white">
+					<div className="botonescard">
+						<Link to={"/planets"}>
+							<button className="btn btn-primary m-2 ">Ir atrás</button>
+						</Link>
+						<button className="btn btn-primary" type="submit" onClick={() => actions.createfavs(selected)}>
+							<i className="far fa-bookmark" /> Agregar a favorito
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
