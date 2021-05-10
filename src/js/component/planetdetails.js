@@ -10,7 +10,7 @@ export const Planetdetails = props => {
 
 	const [planets, Planetdetails] = React.useState([]);
 	const selected = store.planets[id02];
-	console.log("favorites", store.favs);
+	//console.log("favorites", store.favs);
 
 	return (
 		<div className="container colorbg homesize contcard">
@@ -29,11 +29,11 @@ export const Planetdetails = props => {
 						</div>
 						<div className="row text-white cuerpo">
 							<ul>
-								<li>Periodo de rotación: {selected.rotation_period}</li>
-								<li>Tipo de clima: {selected.climate}</li>
-								<li>Terreno: {selected.terrain}</li>
-								<li>Superficie de agua: {selected.surface_water}</li>
-								<li>Población: {selected.population}</li>
+								<li>Rotation period: {selected.rotation_period}</li>
+								<li>Climate: {selected.climate}</li>
+								<li>Terrain: {selected.terrain}</li>
+								<li>Surface water: {selected.surface_water}</li>
+								<li>Population: {selected.population}</li>
 							</ul>
 						</div>
 					</div>

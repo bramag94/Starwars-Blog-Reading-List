@@ -16,7 +16,7 @@ export const Cardplanetas = props => {
 					<h5 className="card-title"> {props.name} </h5>
 					<p className="card-text"> Diameter: {props.diameter}</p>
 					<p className="card-text"> Climate: {props.climate}</p>{" "}
-					<Link to={"/planetdetails/" + props.index}>
+					<Link to={"/planet/details/" + props.index}>
 						<button className="btn btn-primary">Ver más</button>
 					</Link>
 				</div>
