@@ -13,6 +13,7 @@ import { Planets } from "./views/planets";
 import { Characters } from "./views/characters";
 import { Charactersdetails } from "./component/characterdetails";
 import { Planetdetails } from "./component/planetdetails";
+import { Favorites } from "./views/favorites";
 
 //create your first component
 const Layout = () => {
@@ -46,6 +47,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/planet/details/:id02">
 							<Planetdetails />
+						</Route>
+						<Route exact path="/myfavorites">
+							<Favorites />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

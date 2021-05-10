@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			favs: [],
+			peoplefavs: [],
+
 			demo: [
 				{
 					title: "FIRST",
@@ -32,6 +34,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			createfavs: data => {
 				const store = getStore();
 				setStore({ favs: data });
+			},
+
+			createfavspeople: data => {
+				const store = getStore();
+				setStore({ peoplefavs: data });
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

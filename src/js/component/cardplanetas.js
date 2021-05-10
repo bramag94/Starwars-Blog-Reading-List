@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext, useParams, useState } from "react";
 import PropTypes from "prop-types";
 import planetsdetails from "./planetdetails";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Cardplanetas = props => {

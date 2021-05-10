@@ -46,7 +46,10 @@ export const Charactersdetails = props => {
 						<Link to={"/characters"}>
 							<button className="btn btn-primary m-2 ">Ir atrás</button>
 						</Link>
-						<button className="btn btn-primary" type="submit" onClick={() => actions.createfavs(selected)}>
+						<button
+							className="btn btn-primary"
+							type="submit"
+							onClick={() => actions.createfavspeople(personaje)}>
 							<i className="far fa-bookmark" /> Agregar a favorito
 						</button>
 					</div>

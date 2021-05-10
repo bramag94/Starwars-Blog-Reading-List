@@ -6,11 +6,11 @@ import { Context } from "../store/appContext";
 export const Planetdetails = props => {
 	const { store, actions } = useContext(Context);
 	const { id02 } = useParams();
-	console.log(id02);
+	//console.log(id02);
 
 	const [planets, Planetdetails] = React.useState([]);
 	const selected = store.planets[id02];
-	//console.log("favorites", store.favs);
+	console.log("favorites", store.favs);
 
 	return (
 		<div className="container colorbg homesize contcard">
