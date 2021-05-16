@@ -33,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			createfavs: data => {
 				const store = getStore();
-				setStore({ favs: data });
+				setStore({ favs: [...store.favs, data] });
 			},
 
 			createfavspeople: data => {
