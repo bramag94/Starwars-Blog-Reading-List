@@ -17,30 +17,11 @@ export const Navbar = () => {
 				<img src="https://1000marcas.net/wp-content/uploads/2019/12/Star-Wars-emblema.jpg" alt="" height="60" />
 			</div>
 			<div className="ml-auto">
-				<div className="dropdown">
-					<button
-						className="btn btn-dark dropdown-toggle"
-						type="button"
-						id="dropdownMenuButton"
-						data-toggle="dropdown"
-						aria-haspopup="true"
-						aria-expanded="false">
+				<Link to="/myfavorites">
+					<button type="button" className="btn btn-dark">
 						Favorites
 					</button>
-					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<Link to="/myfavorites">
-							<a className="dropdown-item" href="#">
-								Go to favorites
-							</a>
-						</Link>
-						<a className="dropdown-item" href="#">
-							Another action
-						</a>
-						<a className="dropdown-item" href="#">
-							Something else here
-						</a>
-					</div>
-				</div>
+				</Link>
 			</div>
 		</nav>
 	);
