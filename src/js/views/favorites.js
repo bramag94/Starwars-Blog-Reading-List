@@ -7,10 +7,12 @@ import { Button } from "bootstrap";
 export const Favorites = props => {
 	const { store, actions } = useContext(Context);
 	const { index } = useParams();
-	const Planetas = store.favs;
-	const People = store.peoplefavs;
+	const planetas = store.favs;
+	const people = store.peoplefavs;
 	//console.log("misfavoritos", favoritos);
-	const [planetas, setPlanets] = useState([]);
+	const [planets, setPlanets] = useState({ planetas });
+
+	console.log(("mis planetas", planets));
 
 	return (
 		<div className="container text-center mt-5 homesize">
@@ -32,7 +34,7 @@ export const Favorites = props => {
 							<th scope="col">Terrain</th>
 							<th scope="col">Surface Water</th>
 							<th scope="col">Population</th>
-							<th scope="col">Detele</th>
+							<th scope="col">Delete</th>
 						</tr>
 					</thead>
 					{store.favs.map((Planets, index) => {
@@ -49,14 +51,15 @@ export const Favorites = props => {
 									<td>{Planets.terrain}</td>
 									<td>{Planets.surface_water}</td>
 									<td>{Planets.population}</td>
-									<td>
+									<td key={Planets.id}>
 										<button
 											type="button"
 											className="btn btn-primary"
 											onClick={() => {
-												setPlanets(planetas.filter((planets, index) => index !== index));
-											}}
-											key={index}>
+												//planetas.splice(Planets.id, index);
+												//console.log(planetas);
+												setPlanets(planets.filter((Planets.id, index) => index !== index));
+											}}>
 											<i className="far fa-trash-alt" />
 										</button>
 									</td>
