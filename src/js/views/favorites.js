@@ -7,12 +7,17 @@ import { Button } from "bootstrap";
 export const Favorites = props => {
 	const { store, actions } = useContext(Context);
 	const { index } = useParams();
-	const planetas = store.favs;
-	const people = store.peoplefavs;
-	//console.log("misfavoritos", favoritos);
-	const [planets, setPlanets] = useState({ planetas });
 
-	console.log(("mis planetas", planets));
+	const people = store.peoplefavs;
+	const favs = store.favs;
+	const [favoritos, setFavoritos] = useState(store.favs);
+
+	const deleteplanet = e => {
+		const id = e.target.getAttribute("id");
+		setFavoritos(favoritos.filter((planets, index) => planets.id !== id));
+	};
+
+	console.log("mis favoritos", favoritos);
 
 	return (
 		<div className="container text-center mt-5 homesize">
@@ -52,14 +57,7 @@ export const Favorites = props => {
 									<td>{Planets.surface_water}</td>
 									<td>{Planets.population}</td>
 									<td key={Planets.id}>
-										<button
-											type="button"
-											className="btn btn-primary"
-											onClick={() => {
-												//planetas.splice(Planets.id, index);
-												//console.log(planetas);
-												setPlanets(planets.filter((Planets.id, index) => index !== index));
-											}}>
+										<button type="button" className="btn btn-primary" onClick={deleteplanet}>
 											<i className="far fa-trash-alt" />
 										</button>
 									</td>

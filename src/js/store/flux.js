@@ -40,6 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				setStore({ peoplefavs: [...store.peoplefavs, data] });
 			},
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
